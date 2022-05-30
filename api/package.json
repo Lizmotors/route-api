@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "license": "Apache Version 2.0",
-  "author": "Mansehej Singh",
+  "author": "Ankit Kumar Verma",
   "engines": {
     "node": "8"
   },
@@ -14,8 +14,6 @@
   },
   "dependencies": {
     "request": "2.88.0",
-    "firebase-admin": "^8.3.0",
-    "firebase-functions": "^3.2.0",
     "express": "4.17.1 "
   }
 }

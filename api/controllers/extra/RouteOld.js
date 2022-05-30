@@ -178,7 +178,7 @@ function getLast(path, interchange, line1, line2) {
     out.push(getLastCalc(line, path, interchange[i], interchange[i + 1]))
   }
   return out
- }
+}
 
 
 
@@ -194,7 +194,7 @@ function getLastCalc(line, path, interchange, nextInterchange) {
         endPos = j;
     }
     else if (line[j] == nextInterchange) {
-          endPos = j;
+      endPos = j;
     }
   }
   if (endPos < startPos)
@@ -451,10 +451,10 @@ function importlines() {
 importlines();
 
 
-app.get('/route',(req,res)=>{
-  let to= req.query.to
-  let from=  req.query.from
-  result=g.shortestRoute(from,to);
+app.get('/route', (req, res) => {
+  let to = req.query.to
+  let from = req.query.from
+  result = g.shortestRoute(from, to);
   console.log(result)
   res.send(result)
 })
@@ -483,3 +483,17 @@ app.get('/route',(req,res)=>{
 //Green Branch
 //Pink
 //Pink Branch
+
+////Firebase function exporter
+// exports.get = functions.https.onRequest((req, res) => {
+//   if(req.query.to == undefined || req.query.from == undefined) {
+//     res.send({'status' : '400'})
+//     console.log("Invalid params")
+//   }
+//   else {
+//   let to = req.query.to.toLowerCase()
+//   let from = req.query.from.toLowerCase()
+//   result = g.shortestRoute(from, to);
+//   res.send(result)
+//   }
+// })
